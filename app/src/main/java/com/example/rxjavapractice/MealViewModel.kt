@@ -27,7 +27,7 @@ class MealViewModel(application: Application) : AndroidViewModel(application) {
 
     fun getMeal(s : String) : MutableLiveData<Meals>{
 
-        var mlResponse = MutableLiveData<Meals>()
+        val mlResponse = MutableLiveData<Meals>()
 
         mealRepository.getMeal(s)
             .subscribeOn(Schedulers.io())
